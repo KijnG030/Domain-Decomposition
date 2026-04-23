@@ -1,0 +1,34 @@
+Card
+Attack
+Skill
+Power
+
+Combat 
+Enemy
+Player
+
+Rarity
+
+
+Card --*> Attack
+Card --*> Skill
+Card --*> Power
+Card --<*> Rarity
+Rarity -- Common
+Rarity -- Uncommon
+Rarity -- Rare
+
+Combat --<> Player
+Combat --> Enemy
+
+Map --*> Node
+
+Node
+	-enemy
+	-elite
+	-rest sites
+	-unknown
+	-treasure room
+	-merchant
+	-boss
+	-ancient
