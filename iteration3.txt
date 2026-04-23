@@ -160,7 +160,7 @@ Rest sites --*> Mend
 Heal --*> Health
 Smith --*> Card
 
-Unknown -.-> Quest
+Unknown -.-> QuestCard
 
 Monster Node --*> Combat
 Elite Node --*> Combat
