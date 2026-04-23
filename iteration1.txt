@@ -14,3 +14,15 @@ Card --<*> Rarity
 Rarity -- Common
 Rarity -- Uncommon
 Rarity -- Rare
+
+Map --*> Node
+
+Node
+	-enemy
+	-elite
+	-rest sites
+	-unknown
+	-treasure room
+	-merchant
+	-boss
+	-ancient
