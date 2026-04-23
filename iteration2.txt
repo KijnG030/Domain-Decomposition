@@ -57,6 +57,40 @@ Attack --<*> Rarity
 Skill --<*> Rarity
 Power --<*> Rarity
 
+Combat 
+Turn
+Player
+Deck
+Draw Pile
+Hand
+Discard Pile
+Health
+Enemy
+Move
+Enemy Attack
+Buff
+Debuff
+Defend
+
+Combat --<> Player
+Combat --> Enemy
+Enemy --<*> Health
+Enemy --<*> Move
+Enemy --<> Turn
+Move --<*> Enemy Attack
+Move --<*> Buff
+Move --<*> Debuff
+Move --<*> Defend
+Player --<*> Health
+Player --> Deck
+Player --<> Turn
+Deck --*> Discard Pile
+Deck --*> Draw Pile
+Deck --*> Hand
+Hand --> Card
+Discard Pile --> Card
+Draw Pile --> Card
+
 Map
 Node
 	Can be
