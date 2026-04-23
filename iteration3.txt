@@ -1,15 +1,3 @@
-Card
-Attack
-Skill
-Power
-Curse
-Status
-Quest
-
-Rarity
-	Common
-	Uncommon
-	Rare
 
 Keywords
 	Eternal
@@ -26,6 +14,25 @@ Keywords
 	Channel
 	Evoke
 
+Card
+AttackCard
+SkillCard
+PowerCard
+CurseCard
+StatusCard
+QuestCard
+Buff
+Debuff
+Attack
+Defend
+
+EnergyCost
+
+Rarity
+	Common
+	Uncommon
+	Rare
+
 Enchantments
 
 Color
@@ -36,26 +43,39 @@ Color
 	Blue
 	Colorless
 
-Card --*> Attack
-Card --*> Skill
-Card --*> Power
-Card --*> Curse
-Card --*> Status
-Card --*> Quest
+Card --*> AttackCard
+Card --*> SkillCard
+Card --*> PowerCard
+Card --*> CurseCard
+Card --*> StatusCard
+Card --*> QuestCard
 Card --<*> Keywords
 
 Enchantments --<*> Keywords
-Enchantments -.-> Attack
-Enchantments -.-> Power
-Enchantments -.-> Skill
+Enchantments -.-> AttackCard
+Enchantments -.-> PowerCard
+Enchantments -.-> SkillCard
 
-Attack --<*> Color
-Skill --<*> Color
-Power --<*> Color
+AttackCard --<*> Color
+SkillCard --<*> Color
+PowerCard --<*> Color
 
-Attack --<*> Rarity
-Skill --<*> Rarity
-Power --<*> Rarity
+AttackCard --<*> Rarity
+SkillCard --<*> Rarity
+PowerCard --<*> Rarity
+
+AttackCard --<*> EnergyCost
+SkillCard --<*> EnergyCost
+PowerCard --<*> EnergyCost
+StatusCard -.-<*> EnergyCost
+
+AttackCard --<*> Attack
+SkillCard --<*> Debuff
+SkillCard --<*> Buff
+SkillCard --<*> Defend
+PowerCard --<*> Buff
+
+QuestCard --> Unknown
 
 Combat 
 Turn
