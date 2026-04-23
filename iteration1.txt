@@ -3,6 +3,9 @@ Attack
 Skill
 Power
 
+Combat 
+Enemy
+Player
 
 Rarity
 
@@ -14,6 +17,9 @@ Card --<*> Rarity
 Rarity -- Common
 Rarity -- Uncommon
 Rarity -- Rare
+
+Combat --<> Player
+Combat --> Enemy
 
 Map --*> Node
 
