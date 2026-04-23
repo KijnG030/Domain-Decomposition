@@ -1,18 +1,16 @@
-@startuml
-skinparam actorStyle awesome
-skinparam defaultTextAlignment center
+Card
+Attack
+Skill
+Power
 
 
-node "Card Types" {
-  component "Power" as Power
-  component "Skill" as Skill
-  component "Attack" as Attack
-}
+Rarity
 
 
-card --> Power : is a
-card --> Skill : is a
-card --> Attack : is a
-
-
-@enduml
+Card --*> Attack
+Card --*> Skill
+Card --*> Power
+Card --<*> Rarity
+Rarity -- Common
+Rarity -- Uncommon
+Rarity -- Rare
