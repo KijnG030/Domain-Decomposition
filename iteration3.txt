@@ -1,0 +1,113 @@
+Card
+Attack
+Skill
+Power
+Curse
+Status
+Quest
+
+Combat 
+Enemy
+Player
+
+Rarity
+	Common
+	Uncommon
+	Rare
+
+Keywords
+	Eternal
+	Exhaust
+	Ethereal
+	Fatal
+	Innatate
+	Retain
+	Replay
+	Unplayable
+	Sly
+	Forge
+	Summon
+	Channel
+	Evoke
+
+Enchantments
+
+Color
+	Red
+	Green
+	Orange
+	Purple
+	Blue
+	Colorless
+
+Card --*> Attack
+Card --*> Skill
+Card --*> Power
+Card --*> Curse
+Card --*> Status
+Card --*> Quest
+Card --<*> Keywords
+
+Enchantments --<*> Keywords
+Enchantments -.-> Attack
+Enchantments -.-> Power
+Enchantments -.-> Skill
+
+Attack --<*> Color
+Skill --<*> Color
+Power --<*> Color
+
+Attack --<*> Rarity
+Skill --<*> Rarity
+Power --<*> Rarity
+
+Map
+Node
+	Can be
+Enemy
+Monster
+Elite
+Rest sites
+Unknown
+Treasure
+Merchant
+Boss
+Ancients
+Act 1 Ancients
+	Neow
+Act 2 Ancients
+	Orobas
+	Pael
+	Tezcatara
+	Darv
+Act 3 Ancients
+	Darv
+	Nonupeipe
+	Tanx
+	Vakuu
+
+Card --*> Attack
+Card --*> Skill
+Card --*> Power
+Card --<*> Rarity
+Rarity -- Common
+Rarity -- Uncommon
+Rarity -- Rare
+
+Combat --<> Player
+Combat --> Enemy
+
+Map --*> Node
+Ancients --> Act 1 Ancients
+Ancients --> Act 2 Ancients
+Ancients --> Act 3 Ancients
+
+Node --*> Enemy
+Node --*> Rest sites
+Node --*> Unknown
+Node --*> Treasure
+Node --*> Merchant
+Node --*> Boss
+Node --*> Ancients
+Enemy --*> Monster
+Enemy --*> Elite
