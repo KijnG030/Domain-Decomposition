@@ -2,10 +2,64 @@ Card
 Attack
 Skill
 Power
+Curse
+Status
+Quest
 
 Combat 
 Enemy
 Player
+
+Rarity
+	Common
+	Uncommon
+	Rare
+
+Keywords
+	Eternal
+	Exhaust
+	Ethereal
+	Fatal
+	Innatate
+	Retain
+	Replay
+	Unplayable
+	Sly
+	Forge
+	Summon
+	Channel
+	Evoke
+
+Enchantments
+
+Color
+	Red
+	Green
+	Orange
+	Purple
+	Blue
+	Colorless
+
+Card --*> Attack
+Card --*> Skill
+Card --*> Power
+Card --*> Curse
+Card --*> Status
+Card --*> Quest
+Card --<*> Keywords
+
+Enchantments --<*> Keywords
+Enchantments -.-> Attack
+Enchantments -.-> Power
+Enchantments -.-> Skill
+
+Attack --<*> Color
+Skill --<*> Color
+Power --<*> Color
+
+Attack --<*> Rarity
+Skill --<*> Rarity
+Power --<*> Rarity
 
 Map
 Node
@@ -31,10 +85,6 @@ Act 3 Ancients
 	Nonupeipe
 	Tanx
 	Vakuu
-
-
-Rarity
-
 
 Card --*> Attack
 Card --*> Skill
