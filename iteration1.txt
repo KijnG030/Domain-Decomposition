@@ -1,0 +1,17 @@
+@startuml
+skinparam actorStyle awesome
+skinparam defaultTextAlignment center
+skinparam maxMessageSize 150
+
+
+node "Card Types" {
+  component "Power" as Power
+  component "Skill" as Skill
+  component "Attack" as Attack
+}
+
+Actor Athena as Athena #blue
+Actor Tom as Tom #Red
+
+Tom --> Athena : Avoids
+@enduml
