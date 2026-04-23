@@ -79,31 +79,40 @@ QuestCard --> Unknown
 
 Combat 
 Turn
+Health
+Enemy
+Move
+Attack
+Buff
+Debuff
+Defend
+
 Player
+Potion
 Deck
 Draw Pile
 Hand
 Discard Pile
-Health
-Enemy
-Move
-Enemy Attack
-Buff
-Debuff
-Defend
+End Turn
 
 Combat --<> Player
 Combat --> Enemy
 Enemy --<*> Health
 Enemy --<*> Move
 Enemy --<> Turn
-Move --<*> Enemy Attack
+Move --<*> Attack
 Move --<*> Buff
 Move --<*> Debuff
 Move --<*> Defend
+Potion --<*> Attack
+Potion --<*> Buff
+Potion --<*> Debuff
+Potion --<*> Defend
 Player --<*> Health
 Player --> Deck
 Player --<> Turn
+Player --<> Potion
+Player --<> End Turn
 Deck --*> Discard Pile
 Deck --*> Draw Pile
 Deck --*> Hand
