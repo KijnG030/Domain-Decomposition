@@ -114,10 +114,13 @@ Draw Pile --> Card
 Map
 Node
 	Can be
-Enemy
-Monster
-Elite
+Combat
+Monster Node
+Elite Node
 Rest sites
+Heal
+Smith
+Mend
 Unknown
 Treasure
 Merchant
@@ -141,12 +144,23 @@ Ancients --> Act 1 Ancients
 Ancients --> Act 2 Ancients
 Ancients --> Act 3 Ancients
 
-Node --*> Enemy
-Node --*> Rest sites
-Node --*> Unknown
-Node --*> Treasure
-Node --*> Merchant
-Node --*> Boss
-Node --*> Ancients
-Enemy --*> Monster
-Enemy --*> Elite
+Node --> Monster Node
+Node --> Elite Node
+Node --> Rest sites
+Node --> Unknown
+Node --> Treasure
+Node --> Merchant
+Node --> Boss
+Node --> Ancients
+
+Rest sites --*> Heal
+Rest sites --*> Smith
+Rest sites --*> Mend
+
+Heal --*> Health
+Smith --*> Card
+
+Unknown -.-> Quest
+
+Monster Node --*> Combat
+Elite Node --*> Combat
